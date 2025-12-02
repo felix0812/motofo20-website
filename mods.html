@@ -1,67 +1,130 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Motofo20 – Modliste & Setup</title>
+  <title>Motofo20 – Modlist & Setup</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      margin-left: 16px;
+    }
+    .lang-switch button.active {
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.6);
+    }
+  </style>
 </head>
 <body class="bg-grid">
 
   <header class="site-header glass">
     <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
-      <a href="index.html">Start</a>
-      <a href="index.html#join">Beitreten</a>
-      <a href="mods.html" class="active">Modliste</a>
-      <a href="rules.html">Regeln</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="index.html" style="margin-left:16px;">DE</a>
-      <a href="index_en.html">EN</a>
+      <a href="index.html">
+        <span data-lang="en">Home</span>
+        <span data-lang="de">Start</span>
+      </a>
+      <a href="index.html#join">
+        <span data-lang="en">Join</span>
+        <span data-lang="de">Beitreten</span>
+      </a>
+      <a href="mods.html" class="active">
+        <span data-lang="en">Mods</span>
+        <span data-lang="de">Modliste</span>
+      </a>
+      <a href="rules.html">
+        <span data-lang="en">Rules</span>
+        <span data-lang="de">Regeln</span>
+      </a>
+      <a href="changelog.html">
+        <span data-lang="en">Changelog</span>
+        <span data-lang="de">Changelog</span>
+      </a>
+
+      <div class="lang-switch">
+        <button type="button" class="button small" data-set-lang="de">DE</button>
+        <button type="button" class="button small" data-set-lang="en">EN</button>
+      </div>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="hero-text">
-        <p class="hero-pill">🧩 Fabric Setup • Simple Voice Chat • Client-Side Mods</p>
-        <h1>Modliste & Installation</h1>
-        <p class="hero-sub">
+        <p class="hero-pill" data-lang="en">
+          🧩 Fabric setup • Simple Voice Chat • Client-side mods
+        </p>
+        <p class="hero-pill" data-lang="de">
+          🧩 Fabric Setup • Simple Voice Chat • Client-Side-Mods
+        </p>
+
+        <h1 data-lang="en">Modlist & installation</h1>
+        <h1 data-lang="de">Modliste & Installation</h1>
+
+        <p class="hero-sub" data-lang="en">
+          Everything you need to play on the Motofo20 server with the correct version
+          and the right mods – plus direct download links.
+        </p>
+        <p class="hero-sub" data-lang="de">
           Hier findest du alles, was du brauchst, um den Motofo20-Server mit der richtigen
-          Version & den richtigen Mods zu spielen – inklusive Links zu den Downloads.
+          Version & den richtigen Mods zu spielen – inklusive direkter Download-Links.
         </p>
       </div>
     </section>
 
     <section class="card warning glass">
-      <h2>⚠️ Kurzfassung</h2>
-      <ul>
+      <h2 data-lang="en">⚠️ Quick summary</h2>
+      <h2 data-lang="de">⚠️ Kurzfassung</h2>
+      <ul data-lang="en">
+        <li>Play with <b>Minecraft Java 1.21.x</b></li>
+        <li>Use <b>Fabric</b> as your mod loader</li>
+        <li><b>Simple Voice Chat is required</b> – without it you may not be able to join events / play properly</li>
+      </ul>
+      <ul data-lang="de">
         <li>Spiele mit <b>Minecraft Java 1.21.x</b></li>
         <li>Benutze <b>Fabric</b> als Mod-Loader</li>
         <li><b>Simple Voice Chat ist Pflicht</b> – ohne diesen Mod kann es zu Problemen kommen</li>
       </ul>
-      <p class="small-note">
+      <p class="small-note" data-lang="en">
+        All other client-side mods are <b>allowed</b> as long as they don’t give unfair advantages.
+      </p>
+      <p class="small-note" data-lang="de">
         Alle weiteren Client-Side-Mods sind <b>erlaubt</b>, solange sie keine unfairen Vorteile bringen.
       </p>
     </section>
 
     <section class="card glass">
-      <h2>🧩 Pflichtmod</h2>
+      <h2 data-lang="en">🧩 Required mod</h2>
+      <h2 data-lang="de">🧩 Pflichtmod</h2>
       <div class="modlist">
         <div class="modlist-item">
           <h3>Simple Voice Chat</h3>
-          <p class="mod-desc">
+          <p class="mod-desc" data-lang="en">
+            Main mod for in-game voice chat. Hear players nearby, create groups and join event channels
+            without always having to sit in Discord.
+          </p>
+          <p class="mod-desc" data-lang="de">
             Hauptmod für Ingame-Sprachchat. Du hörst Spieler in deiner Nähe,
             kannst Gruppen & Events nutzen und musst nicht immer im Discord hängen.
           </p>
           <p class="mod-tags">
-            <span class="tag required">Pflicht</span>
+            <span class="tag required" data-lang="en">Required</span>
+            <span class="tag required" data-lang="de">Pflicht</span>
             <span class="tag fabric">Fabric</span>
             <span class="tag forge">Forge</span>
           </p>
           <a class="button small"
              href="https://modrinth.com/plugin/simple-voice-chat"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer"
+             data-lang="en">
+            🔗 Simple Voice Chat (Modrinth)
+          </a>
+          <a class="button small"
+             href="https://modrinth.com/plugin/simple-voice-chat"
+             target="_blank" rel="noopener noreferrer"
+             data-lang="de">
             🔗 Simple Voice Chat (Modrinth)
           </a>
         </div>
@@ -69,122 +132,188 @@
     </section>
 
     <section class="card glass">
-      <h2>✨ Empfohlene Client-Side-Mods</h2>
-      <p class="small-note">
+      <h2 data-lang="en">✨ Recommended client-side mods</h2>
+      <h2 data-lang="de">✨ Empfohlene Client-Side-Mods</h2>
+      <p class="small-note" data-lang="en">
+        These mods are <b>optional</b> but make your experience much better.
+        Allowed are all mods that only affect your client and don’t provide unfair advantages.
+      </p>
+      <p class="small-note" data-lang="de">
         Diese Mods sind <b>optional</b>, verbessern aber dein Spielerlebnis.
-        Erlaubt sind alle Mods, die nur dich betreffen (Client-Side) und
-        keine unfairen Vorteile bringen.
+        Erlaubt sind alle Mods, die nur dich betreffen (Client-Side) und keine unfairen Vorteile bringen.
       </p>
 
       <div class="modlist">
         <div class="modlist-item">
           <h3>Xaero’s Minimap</h3>
-          <p class="mod-desc">
-            Übersichtliche Minimap mit Wegpunkten & Positionsanzeige.
-            Perfekt für Orientierung auf langen Reisen.
+          <p class="mod-desc" data-lang="en">
+            Clean minimap with waypoints and position indicator – perfect for navigation.
+          </p>
+          <p class="mod-desc" data-lang="de">
+            Übersichtliche Minimap mit Wegpunkten & Positionsanzeige – perfekt für Orientierung.
           </p>
           <p class="mod-tags">
-            <span class="tag optional">Optional</span>
+            <span class="tag optional" data-lang="en">Optional</span>
+            <span class="tag optional" data-lang="de">Optional</span>
             <span class="tag fabric">Fabric</span>
           </p>
           <a class="button small"
              href="https://modrinth.com/mod/xaeros-minimap"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer"
+             data-lang="en">
             🔗 Download Xaero’s Minimap
+          </a>
+          <a class="button small"
+             href="https://modrinth.com/mod/xaeros-minimap"
+             target="_blank" rel="noopener noreferrer"
+             data-lang="de">
+            🔗 Xaero’s Minimap herunterladen
           </a>
         </div>
 
         <div class="modlist-item">
           <h3>Xaero’s World Map</h3>
-          <p class="mod-desc">
-            Große Weltkarte, auf der deine erkundeten Bereiche angezeigt werden.
+          <p class="mod-desc" data-lang="en">
+            A fullscreen world map that shows the areas you’ve explored.
+            Great together with the minimap.
+          </p>
+          <p class="mod-desc" data-lang="de">
+            Eine Vollbild-Weltkarte, die deine erkundeten Bereiche anzeigt.
             Ideal in Kombination mit der Minimap.
           </p>
           <p class="mod-tags">
-            <span class="tag optional">Optional</span>
+            <span class="tag optional" data-lang="en">Optional</span>
+            <span class="tag optional" data-lang="de">Optional</span>
             <span class="tag fabric">Fabric</span>
           </p>
           <a class="button small"
              href="https://modrinth.com/mod/xaeros-world-map"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer"
+             data-lang="en">
             🔗 Download Xaero’s World Map
+          </a>
+          <a class="button small"
+             href="https://modrinth.com/mod/xaeros-world-map"
+             target="_blank" rel="noopener noreferrer"
+             data-lang="de">
+            🔗 Xaero’s World Map herunterladen
           </a>
         </div>
 
         <div class="modlist-item">
           <h3>Sodium</h3>
-          <p class="mod-desc">
+          <p class="mod-desc" data-lang="en">
+            Performance mod that can massively improve your FPS,
+            especially around large bases and many players.
+          </p>
+          <p class="mod-desc" data-lang="de">
             Performance-Mod, die deine FPS massiv verbessern kann –
             besonders bei großen Basen & vielen Spielern.
           </p>
           <p class="mod-tags">
-            <span class="tag optional">Optional</span>
+            <span class="tag optional" data-lang="en">Optional</span>
+            <span class="tag optional" data-lang="de">Optional</span>
             <span class="tag fabric">Fabric</span>
           </p>
           <a class="button small"
              href="https://modrinth.com/mod/sodium"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer"
+             data-lang="en">
             🔗 Download Sodium
+          </a>
+          <a class="button small"
+             href="https://modrinth.com/mod/sodium"
+             target="_blank" rel="noopener noreferrer"
+             data-lang="de">
+            🔗 Sodium herunterladen
           </a>
         </div>
 
         <div class="modlist-item">
           <h3>Distant Horizons</h3>
-          <p class="mod-desc">
+          <p class="mod-desc" data-lang="en">
+            Extends your view distance using LOD terrain so you can see far away
+            landscapes without killing your PC.
+          </p>
+          <p class="mod-desc" data-lang="de">
             Erweitert die Sichtweite mit Level-of-Detail-Chunks,
             sodass du weit entfernte Landschaften sehen kannst,
             ohne dass dein PC stirbt.
           </p>
           <p class="mod-tags">
-            <span class="tag optional">Optional</span>
+            <span class="tag optional" data-lang="en">Optional</span>
+            <span class="tag optional" data-lang="de">Optional</span>
             <span class="tag fabric">Fabric</span>
           </p>
           <a class="button small"
              href="https://modrinth.com/mod/distanthorizons"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank" rel="noopener noreferrer"
+             data-lang="en">
             🔗 Download Distant Horizons
+          </a>
+          <a class="button small"
+             href="https://modrinth.com/mod/distanthorizons"
+             target="_blank" rel="noopener noreferrer"
+             data-lang="de">
+            🔗 Distant Horizons herunterladen
           </a>
         </div>
       </div>
     </section>
 
     <section class="card glass">
-      <h2>📦 Schritt-für-Schritt: Fabric + Mods</h2>
+      <h2 data-lang="en">📦 Step-by-step: Fabric + mods</h2>
+      <h2 data-lang="de">📦 Schritt-für-Schritt: Fabric + Mods</h2>
       <div class="grid-2">
-        <ol class="steps">
-          <li>Downloade den <b>Fabric-Installer</b> für Minecraft 1.21.x von der offiziellen Seite.</li>
-          <li>Starte den Installer und wähle deine Minecraft-Version & dein Profil.</li>
-          <li>Starte den Launcher einmal mit dem neuen Fabric-Profil, damit der <code>mods</code>-Ordner erstellt wird.</li>
-          <li>Öffne deinen <code>.minecraft</code>-Ordner und gehe in den Ordner <code>mods</code>.</li>
-          <li>Lege die <b>Simple Voice Chat</b>-Mod (.jar) und deine optionalen Client-Mods dort ab.</li>
+        <ol class="steps" data-lang="en">
+          <li>Download the <b>Fabric installer</b> for Minecraft 1.21.x from the official site.</li>
+          <li>Run the installer and pick your Minecraft version & profile.</li>
+          <li>Start the launcher once with the Fabric profile so the <code>mods</code> folder is created.</li>
+          <li>Open your <code>.minecraft</code> folder and go to the <code>mods</code> directory.</li>
+          <li>Drop the <b>Simple Voice Chat</b> .jar and your optional client mods into that folder.</li>
         </ol>
 
-        <ol class="steps">
-          <li>Starte Minecraft erneut mit dem Fabric-Profil.</li>
-          <li>Gehe auf „Multiplayer“ → „Server hinzufügen“.</li>
-          <li>Trage als Adresse <code>mc.motofo20.de</code> ein.</li>
-          <li>Server speichern & joinen.</li>
-          <li>Im Voice-Chat-Menü (Taste siehe Mod-Einstellungen) dein Mikro einrichten.</li>
+        <ol class="steps" data-lang="de">
+          <li>Lade den <b>Fabric-Installer</b> für Minecraft 1.21.x von der offiziellen Seite herunter.</li>
+          <li>Starte den Installer und wähle deine Minecraft-Version & dein Profil.</li>
+          <li>Starte den Launcher einmal mit dem Fabric-Profil, damit der <code>mods</code>-Ordner erstellt wird.</li>
+          <li>Öffne deinen <code>.minecraft</code>-Ordner und gehe in den Ordner <code>mods</code>.</li>
+          <li>Lege die <b>Simple Voice Chat</b>-Mod (.jar) und deine optionalen Client-Mods dort ab.</li>
         </ol>
       </div>
     </section>
 
     <section class="card glass">
-      <h2>🛠️ Troubleshooting</h2>
+      <h2 data-lang="en">🛠️ Troubleshooting</h2>
+      <h2 data-lang="de">🛠️ Troubleshooting</h2>
       <div class="faq-item">
-        <h3>Das Spiel crasht beim Start</h3>
-        <p>
+        <h3 data-lang="en">Game crashes on startup</h3>
+        <h3 data-lang="de">Das Spiel crasht beim Start</h3>
+        <p data-lang="en">
+          Check that <b>all mods match the same version</b> (1.21.x) and that you’re not
+          mixing Forge-only mods with Fabric.
+        </p>
+        <p data-lang="de">
           Prüfe, ob <b>alle Mods zur gleichen Version</b> passen (1.21.x) und ob du nicht
           Forge-Only-Mods mit Fabric mischst.
         </p>
       </div>
 
       <div class="faq-item">
-        <h3>Voice Chat funktioniert nicht</h3>
-        <p>
-          Öffne das Simple-Voice-Chat-Menü (Standard-Key, siehe Mod-Einstellungen) und prüfe:
+        <h3 data-lang="en">Voice chat doesn’t work</h3>
+        <h3 data-lang="de">Voice Chat funktioniert nicht</h3>
+        <p data-lang="en">
+          Open the Simple Voice Chat menu (keybind in the mod settings) and check:
         </p>
-        <ul>
+        <p data-lang="de">
+          Öffne das Simple-Voice-Chat-Menü (Taste in den Mod-Einstellungen) und prüfe:
+        </p>
+        <ul data-lang="en">
+          <li>The correct microphone is selected</li>
+          <li>Push-to-talk is bound correctly (if enabled)</li>
+          <li>Your Minecraft sound is not muted and volume is reasonable</li>
+        </ul>
+        <ul data-lang="de">
           <li>Ist das richtige Mikrofon ausgewählt?</li>
           <li>Ist Push-to-Talk korrekt gebunden (falls aktiviert)?</li>
           <li>Ist dein Minecraft-Sound nicht gemutet und die Lautstärke ausreichend?</li>
@@ -193,8 +322,50 @@
     </section>
 
     <footer>
-      <p>© Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.</p>
+      <p data-lang="en">
+        © Motofo20 Minecraft Server • Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.
+      </p>
+      <p data-lang="de">
+        © Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.
+      </p>
     </footer>
   </main>
+
+  <script>
+    const LANG_KEY = 'moto_lang';
+
+    function applyLanguage(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      const allLangNodes = document.querySelectorAll('[data-lang]');
+      allLangNodes.forEach(el => {
+        if (el.dataset.lang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.setLang === lang);
+      });
+
+      localStorage.setItem(LANG_KEY, lang);
+    }
+
+    (function initLang() {
+      let lang = localStorage.getItem(LANG_KEY);
+      if (!lang) {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        lang = browserLang.startsWith('de') ? 'de' : 'en';
+      }
+      applyLanguage(lang);
+    })();
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.setLang);
+      });
+    });
+  </script>
 </body>
 </html>
