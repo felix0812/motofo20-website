@@ -1,30 +1,72 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Motofo20 – Server Changelog</title>
+  <title>Motofo20 – Server changelog</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      margin-left: 16px;
+    }
+    .lang-switch button.active {
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.6);
+    }
+    .admin-form label {
+      font-size: 0.85rem;
+    }
+  </style>
 </head>
 <body class="bg-grid">
 
   <header class="site-header glass">
     <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
-      <a href="index.html">Start</a>
-      <a href="index.html#join">Beitreten</a>
-      <a href="mods.html">Modliste</a>
-      <a href="rules.html">Regeln</a>
-      <a href="changelog.html" class="active">Changelog</a>
+      <a href="index.html">
+        <span data-lang="en">Home</span>
+        <span data-lang="de">Start</span>
+      </a>
+      <a href="index.html#join">
+        <span data-lang="en">Join</span>
+        <span data-lang="de">Beitreten</span>
+      </a>
+      <a href="mods.html">
+        <span data-lang="en">Mods</span>
+        <span data-lang="de">Modliste</span>
+      </a>
+      <a href="rules.html">
+        <span data-lang="en">Rules</span>
+        <span data-lang="de">Regeln</span>
+      </a>
+      <a href="changelog.html" class="active">
+        <span data-lang="en">Changelog</span>
+        <span data-lang="de">Changelog</span>
+      </a>
+
+      <div class="lang-switch">
+        <button type="button" class="button small" data-set-lang="de">DE</button>
+        <button type="button" class="button small" data-set-lang="en">EN</button>
+      </div>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="hero-text">
-        <p class="hero-pill">🗓️ Updates • Events • Änderungen</p>
-        <h1>Server-Changelog</h1>
-        <p class="hero-sub">
+        <p class="hero-pill" data-lang="en">🗓️ Updates • Events • Changes</p>
+        <p class="hero-pill" data-lang="de">🗓️ Updates • Events • Änderungen</p>
+
+        <h1 data-lang="en">Server changelog</h1>
+        <h1 data-lang="de">Server-Changelog</h1>
+
+        <p class="hero-sub" data-lang="en">
+          See what has changed on the Motofo20 server – new events, technical changes,
+          balancing tweaks and more.
+        </p>
+        <p class="hero-sub" data-lang="de">
           Hier siehst du, was sich am Motofo20-Server geändert hat – neue Events,
           technische Anpassungen, Balancing und mehr.
         </p>
@@ -32,49 +74,228 @@
     </section>
 
     <section class="card glass">
-      <h2>📅 Übersicht</h2>
-      <div class="timeline">
-
-        <!-- Beispiel-Eintrag – kannst du anpassen -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">02.12.2025</span>
-            <h3>Launch der neuen Website & Mod-Anpassungen</h3>
-            <ul>
-              <li>Neue Server-Website mit Startseite, Modliste, Regeln & Changelog.</li>
-              <li>Klarstellung: Alle Client-Side-Mods sind erlaubt, solange sie fair bleiben.</li>
-              <li>Empfohlene Mods: Xaero’s Minimap, Xaero’s World Map, Sodium, Distant Horizons.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Weiterer Beispiel-Eintrag -->
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <span class="timeline-date">xx.xx.2025</span>
-            <h3>Winter-Event & Schatzsuche</h3>
-            <ul>
-              <li>Start des Winter-Events mit eigener Event-Map.</li>
-              <li>Neue Schatzsuche mit Rätseln & Voice-Chat-Interaktionen.</li>
-              <li>Kleine Performance-Optimierungen am Haupt-Spawn.</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Neuen Eintrag später einfach kopieren & unten anhängen -->
-
+      <h2 data-lang="en">📅 Overview</h2>
+      <h2 data-lang="de">📅 Übersicht</h2>
+      <div id="changelog-timeline" class="timeline">
+        <!-- Entries injected via JS -->
       </div>
-      <p class="small-note">
-        Tipp: Immer wenn du am Server etwas Wichtiges änderst, hier kurz eintragen – dann sehen Spieler
-        direkt, was neu ist.
+      <p class="small-note" data-lang="en">
+        Note: This changelog is updated manually by the server admin.
+      </p>
+      <p class="small-note" data-lang="de">
+        Hinweis: Dieses Changelog wird manuell vom Server-Admin gepflegt.
       </p>
     </section>
 
+    <section class="card glass">
+      <h2 data-lang="en">🔐 Admin – add changelog entry</h2>
+      <h2 data-lang="de">🔐 Admin – Changelog-Eintrag hinzufügen</h2>
+      <p class="small-note" data-lang="en">
+        This form is for the server admin only. Do not share the password.
+      </p>
+      <p class="small-note" data-lang="de">
+        Dieses Formular ist nur für den Server-Admin. Teile das Passwort nicht mit anderen.
+      </p>
+
+      <form id="changelog-form" class="admin-form">
+        <div style="margin-bottom:8px;">
+          <label for="cl-title" data-lang="en"><b>Title</b></label>
+          <label for="cl-title" data-lang="de"><b>Titel</b></label><br/>
+          <input id="cl-title" name="title" type="text"
+                 style="width:100%; padding:6px; border-radius:6px; border:1px solid #1f2937; background:#020617; color:#e5e7eb;"
+                 required />
+        </div>
+
+        <div style="margin-bottom:8px;">
+          <label for="cl-items" data-lang="en"><b>Items (one bullet per line)</b></label>
+          <label for="cl-items" data-lang="de"><b>Punkte (eine Zeile pro Bulletpoint)</b></label><br/>
+          <textarea id="cl-items" name="items" rows="5"
+                    style="width:100%; padding:6px; border-radius:6px; border:1px solid #1f2937; background:#020617; color:#e5e7eb;"
+                    required></textarea>
+        </div>
+
+        <div style="margin-bottom:8px;">
+          <label for="cl-password" data-lang="en"><b>Admin password</b></label>
+          <label for="cl-password" data-lang="de"><b>Admin-Passwort</b></label><br/>
+          <input id="cl-password" name="password" type="password"
+                 style="width:100%; padding:6px; border-radius:6px; border:1px solid #1f2937; background:#020617; color:#e5e7eb;"
+                 required />
+        </div>
+
+        <button type="submit" class="button primary" data-lang="en">Add entry</button>
+        <button type="submit" class="button primary" data-lang="de">Eintrag hinzufügen</button>
+        <span id="cl-status" class="small-note" style="margin-left:8px;"></span>
+      </form>
+    </section>
+
     <footer>
-      <p>© Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.</p>
+      <p data-lang="en">
+        © Motofo20 Minecraft Server • Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.
+      </p>
+      <p data-lang="de">
+        © Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.
+      </p>
     </footer>
   </main>
+
+  <script>
+    const LANG_KEY = 'moto_lang';
+
+    function getCurrentLang() {
+      return document.documentElement.getAttribute('data-lang') || 'en';
+    }
+
+    function applyLanguage(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      const allLangNodes = document.querySelectorAll('[data-lang]');
+      allLangNodes.forEach(el => {
+        if (el.dataset.lang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.setLang === lang);
+      });
+
+      localStorage.setItem(LANG_KEY, lang);
+    }
+
+    (function initLang() {
+      let lang = localStorage.getItem(LANG_KEY);
+      if (!lang) {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        lang = browserLang.startsWith('de') ? 'de' : 'en';
+      }
+      applyLanguage(lang);
+    })();
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.setLang);
+        loadChangelog(); // neu laden, damit Texte (Loading...) in richtiger Sprache sind
+      });
+    });
+
+    const messages = {
+      en: {
+        loading: 'Loading changelog…',
+        none: 'No entries yet.',
+        loadError: 'Could not load changelog.',
+        sending: 'Sending…',
+        errorPrefix: 'Error: ',
+        unknownError: 'Unknown error',
+        ok: 'Entry added ✔',
+        networkError: 'Error while sending.'
+      },
+      de: {
+        loading: 'Changelog wird geladen…',
+        none: 'Noch keine Einträge.',
+        loadError: 'Changelog konnte nicht geladen werden.',
+        sending: 'Wird gesendet…',
+        errorPrefix: 'Fehler: ',
+        unknownError: 'Unbekannter Fehler',
+        ok: 'Eintrag hinzugefügt ✔',
+        networkError: 'Fehler beim Senden.'
+      }
+    };
+
+    async function loadChangelog() {
+      const container = document.getElementById('changelog-timeline');
+      const lang = getCurrentLang();
+      const msg = messages[lang] || messages.en;
+
+      container.innerHTML = '<p class="small-note">' + msg.loading + '</p>';
+
+      try {
+        const res = await fetch('get_changelog.php');
+        const data = await res.json();
+
+        if (!data.success) {
+          container.innerHTML = '<p class="small-note">' + msg.loadError + '</p>';
+          return;
+        }
+
+        if (!data.entries || data.entries.length === 0) {
+          container.innerHTML = '<p class="small-note">' + msg.none + '</p>';
+          return;
+        }
+
+        container.innerHTML = '';
+
+        data.entries.forEach(entry => {
+          const wrapper = document.createElement('div');
+          wrapper.className = 'timeline-item';
+
+          const dot = document.createElement('div');
+          dot.className = 'timeline-dot';
+
+          const content = document.createElement('div');
+          content.className = 'timeline-content';
+
+          const dateSpan = document.createElement('span');
+          dateSpan.className = 'timeline-date';
+          const date = new Date(entry.created_at.replace(' ', 'T'));
+          dateSpan.textContent = date.toLocaleDateString();
+
+          const title = document.createElement('h3');
+          title.textContent = entry.title;
+
+          const ul = document.createElement('ul');
+          const lines = entry.items.split('\n').filter(l => l.trim().length > 0);
+          lines.forEach(line => {
+            const li = document.createElement('li');
+            li.textContent = line;
+            ul.appendChild(li);
+          });
+
+          content.appendChild(dateSpan);
+          content.appendChild(title);
+          content.appendChild(ul);
+
+          wrapper.appendChild(dot);
+          wrapper.appendChild(content);
+          container.appendChild(wrapper);
+        });
+      } catch (e) {
+        console.error(e);
+        container.innerHTML = '<p class="small-note">' + msg.loadError + '</p>';
+      }
+    }
+
+    document.getElementById('changelog-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const lang = getCurrentLang();
+      const msg = messages[lang] || messages.en;
+      const status = document.getElementById('cl-status');
+      status.textContent = msg.sending;
+
+      const formData = new FormData(e.target);
+
+      try {
+        const res = await fetch('add_changelog.php', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await res.json();
+
+        if (!data.success) {
+          status.textContent = msg.errorPrefix + (data.error || msg.unknownError);
+          return;
+        }
+
+        status.textContent = msg.ok;
+        (e.target).reset();
+        loadChangelog();
+      } catch (err) {
+        console.error(err);
+        status.textContent = msg.networkError;
+      }
+    });
+
+    loadChangelog();
+  </script>
 </body>
 </html>
