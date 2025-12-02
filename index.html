@@ -6,38 +6,38 @@
   <title>Motofo20 Minecraft Server</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="bg-grid">
 
-  <header class="site-header">
-    <div class="logo">Motofo20 MC</div>
+  <header class="site-header glass">
+    <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
-      <a href="index.html">Start</a>
+      <a href="index.html" class="active">Start</a>
+      <a href="#join">Beitreten</a>
       <a href="mods.html">Modliste</a>
+      <a href="#faq">FAQ</a>
     </nav>
   </header>
 
   <main class="container">
+
+    <!-- HERO -->
     <section class="hero">
-      <h1>Motofo20 Minecraft Server</h1>
-      <p>Community, Abenteuer & Simple Voice Chat – join die Welt von Motofo20.</p>
-    </section>
+      <div class="hero-text">
+        <p class="hero-pill">🌍 Fabric SMP • Simple Voice Chat</p>
+        <h1>Motofo20 Minecraft Server</h1>
+        <p class="hero-sub">
+          Community, Events & Roleplay – mit echtem Ingame-Voicechat über
+          <b>Simple Voice Chat</b>. Perfekt für chillige Sessions und große Projekte.
+        </p>
 
-    <!-- IP + Copy Button -->
-    <section class="card">
-      <h2>🔗 Server IP</h2>
-
-      <div class="ip-row">
-        <div>
-          <p class="ip-label">Haupt-IP:</p>
-          <p class="ip">mc.motofo20.de</p>
+        <div class="hero-actions">
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de">
+            ⛏️ IP kopieren & beitreten
+          </button>
+          <a href="mods.html" class="button ghost">
+            🧩 Modliste ansehen
+          </a>
         </div>
-        <button class="button copy-btn" data-ip="mc.motofo20.de">
-          IP kopieren
-        </button>
-      </div>
 
-      <div class="ip-row">
-        <div>
-          <p class="ip-label">Alternative IP:</p>
-          <p class="ip-alt">mc.motofo20.com</p>
-        </div>
+        <p class="hero-meta">
+          Java Edition <b>1.21.x</b> • Mod-Loader: <b>Fabric</b> • Sprache: 🇩🇪
