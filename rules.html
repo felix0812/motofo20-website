@@ -1,30 +1,69 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Motofo20 – Regeln</title>
+  <title>Motofo20 – Rules</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      margin-left: 16px;
+    }
+    .lang-switch button.active {
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.6);
+    }
+  </style>
 </head>
 <body class="bg-grid">
 
   <header class="site-header glass">
     <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
-      <a href="index.html">Start</a>
-      <a href="index.html#join">Beitreten</a>
-      <a href="mods.html">Modliste</a>
-      <a href="rules.html" class="active">Regeln</a>
-      <a href="changelog.html">Changelog</a>
+      <a href="index.html">
+        <span data-lang="en">Home</span>
+        <span data-lang="de">Start</span>
+      </a>
+      <a href="index.html#join">
+        <span data-lang="en">Join</span>
+        <span data-lang="de">Beitreten</span>
+      </a>
+      <a href="mods.html">
+        <span data-lang="en">Mods</span>
+        <span data-lang="de">Modliste</span>
+      </a>
+      <a href="rules.html" class="active">
+        <span data-lang="en">Rules</span>
+        <span data-lang="de">Regeln</span>
+      </a>
+      <a href="changelog.html">
+        <span data-lang="en">Changelog</span>
+        <span data-lang="de">Changelog</span>
+      </a>
+
+      <div class="lang-switch">
+        <button type="button" class="button small" data-set-lang="de">DE</button>
+        <button type="button" class="button small" data-set-lang="en">EN</button>
+      </div>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
       <div class="hero-text">
-        <p class="hero-pill">📜 Server-Regeln • Fairplay • Respekt</p>
-        <h1>Regeln auf dem Motofo20-Server</h1>
-        <p class="hero-sub">
+        <p class="hero-pill" data-lang="en">📜 Server rules • Fair play • Respect</p>
+        <p class="hero-pill" data-lang="de">📜 Server-Regeln • Fairplay • Respekt</p>
+
+        <h1 data-lang="en">Rules on the Motofo20 server</h1>
+        <h1 data-lang="de">Regeln auf dem Motofo20-Server</h1>
+
+        <p class="hero-sub" data-lang="en">
+          For the server to stay fun for everyone, a few simple but clear rules apply.
+          By joining, you agree to these rules.
+        </p>
+        <p class="hero-sub" data-lang="de">
           Damit der Server für alle Spaß macht, gelten ein paar einfache,
           aber klare Regeln. Mit dem Joinen erkennst du diese Regeln an.
         </p>
@@ -32,8 +71,15 @@
     </section>
 
     <section class="card glass">
-      <h2>1. Allgemeines Verhalten</h2>
-      <ul class="rules-list">
+      <h2 data-lang="en">1. General behaviour</h2>
+      <h2 data-lang="de">1. Allgemeines Verhalten</h2>
+      <ul class="rules-list" data-lang="en">
+        <li>Be respectful – no bullying, harassment or toxic behaviour.</li>
+        <li>No racism, sexism or other discrimination.</li>
+        <li>Follow the instructions of the server team.</li>
+        <li>Streaming/recording is allowed as long as you don’t leak private information about others.</li>
+      </ul>
+      <ul class="rules-list" data-lang="de">
         <li>Respektvoller Umgang miteinander – kein Mobbing, keine Beleidigungen, kein toxisches Verhalten.</li>
         <li>Kein Rassismus, Sexismus oder andere Diskriminierung.</li>
         <li>Folge den Anweisungen des Server-Teams.</li>
@@ -42,18 +88,32 @@
     </section>
 
     <section class="card glass">
-      <h2>2. Gameplay & Griefing</h2>
-      <ul class="rules-list">
+      <h2 data-lang="en">2. Gameplay & griefing</h2>
+      <h2 data-lang="de">2. Gameplay & Griefing</h2>
+      <ul class="rules-list" data-lang="en">
+        <li>No griefing: don’t break or modify builds that obviously belong to someone else.</li>
+        <li>No stealing from chests / shulkers / farms of other players.</li>
+        <li>Pranks are fine as long as they are clearly harmless and don’t cause permanent damage.</li>
+        <li>Large farms, cities and redstone projects should be coordinated with others to avoid lag.</li>
+      </ul>
+      <ul class="rules-list" data-lang="de">
         <li>Kein Griefing: Baue nichts ohne Erlaubnis ab, was eindeutig jemand anderem gehört.</li>
-        <li>Kein Diebstahl aus Kisten / Shulker / Farmen anderer Spieler.</li>
+        <li>Kein Diebstahl aus Kisten / Shulkern / Farmen anderer Spieler.</li>
         <li>Pranks sind okay, solange sie klar als Spaß erkennbar sind und nichts dauerhaft zerstören.</li>
         <li>Große Projekte (Städte, Farmen, Redstone) bitte mit den anderen abstimmen, damit es nicht laggt.</li>
       </ul>
     </section>
 
     <section class="card glass">
-      <h2>3. Chat & Voice Chat</h2>
-      <ul class="rules-list">
+      <h2 data-lang="en">3. Chat & voice chat</h2>
+      <h2 data-lang="de">3. Chat & Voice Chat</h2>
+      <ul class="rules-list" data-lang="en">
+        <li>Simple Voice Chat is required – use it responsibly.</li>
+        <li>No screaming, spamming or sound abuse (music through mic, annoying noises, etc.).</li>
+        <li>Respect privacy: don’t record / leak voice conversations if someone doesn’t want that.</li>
+        <li>The same respect rules apply to text chat and voice chat.</li>
+      </ul>
+      <ul class="rules-list" data-lang="de">
         <li>Simple Voice Chat ist Pflicht – nutze ihn verantwortungsvoll.</li>
         <li>Kein Schreien, Spammen oder Sound-Abuse (Musik über Mikro, Störgeräusche, etc.).</li>
         <li>Privatsphäre respektieren: Keine Gespräche aufnehmen / leaken, wenn jemand das nicht möchte.</li>
@@ -62,8 +122,15 @@
     </section>
 
     <section class="card glass">
-      <h2>4. Technik & Mods</h2>
-      <ul class="rules-list">
+      <h2 data-lang="en">4. Tech & mods</h2>
+      <h2 data-lang="de">4. Technik & Mods</h2>
+      <ul class="rules-list" data-lang="en">
+        <li>Client-side mods are allowed as long as they don’t give unfair advantages (e.g. no X-Ray).</li>
+        <li>Required mod: <b>Simple Voice Chat</b>.</li>
+        <li>Recommended: Xaero’s Minimap, Xaero’s World Map, Sodium, Distant Horizons.</li>
+        <li>Cheat clients and hacks are strictly forbidden.</li>
+      </ul>
+      <ul class="rules-list" data-lang="de">
         <li>Client-Side-Mods sind erlaubt, solange sie keine unfairen Vorteile bringen (z. B. kein X-Ray).</li>
         <li>Pflichtmod: <b>Simple Voice Chat</b>.</li>
         <li>Empfohlen: Xaero’s Minimap, Xaero’s World Map, Sodium, Distant Horizons.</li>
@@ -72,8 +139,14 @@
     </section>
 
     <section class="card glass">
-      <h2>5. Strafen</h2>
-      <ul class="rules-list">
+      <h2 data-lang="en">5. Punishments</h2>
+      <h2 data-lang="de">5. Strafen</h2>
+      <ul class="rules-list" data-lang="en">
+        <li>Minor violations: warnings or short timeouts.</li>
+        <li>Repeated or severe violations: kicks or bans, at the discretion of the server team.</li>
+        <li>If in doubt, the team decides – the goal is that the server stays fun for everyone.</li>
+      </ul>
+      <ul class="rules-list" data-lang="de">
         <li>Bei leichten Verstößen: Ermahnung oder kurzer Timeout.</li>
         <li>Bei wiederholtem oder schwerem Fehlverhalten: Kick oder Ban, je nach Entscheidung des Server-Teams.</li>
         <li>Im Zweifel entscheidet das Team – es geht darum, dass der Server für alle Spaß macht.</li>
@@ -81,8 +154,50 @@
     </section>
 
     <footer>
-      <p>© Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.</p>
+      <p data-lang="en">
+        © Motofo20 Minecraft Server • Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.
+      </p>
+      <p data-lang="de">
+        © Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.
+      </p>
     </footer>
   </main>
+
+  <script>
+    const LANG_KEY = 'moto_lang';
+
+    function applyLanguage(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      const allLangNodes = document.querySelectorAll('[data-lang]');
+      allLangNodes.forEach(el => {
+        if (el.dataset.lang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.setLang === lang);
+      });
+
+      localStorage.setItem(LANG_KEY, lang);
+    }
+
+    (function initLang() {
+      let lang = localStorage.getItem(LANG_KEY);
+      if (!lang) {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        lang = browserLang.startsWith('de') ? 'de' : 'en';
+      }
+      applyLanguage(lang);
+    })();
+
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.setLang);
+      });
+    });
+  </script>
 </body>
 </html>
