@@ -3,42 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Motofo20 – Modliste</title>
+  <title>Motofo20 – Modliste & Setup</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
+<body class="bg-grid">
 
-  <header class="site-header">
-    <div class="logo">Motofo20 MC</div>
+  <header class="site-header glass">
+    <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
       <a href="index.html">Start</a>
+      <a href="index.html#join">Beitreten</a>
       <a href="mods.html" class="active">Modliste</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Modliste & Setup</h1>
-      <p>Hier findest du die wichtigsten Infos, um deinen Client für den Motofo20-Server einzurichten.</p>
+      <div class="hero-text">
+        <p class="hero-pill">🧩 Fabric Setup • Simple Voice Chat</p>
+        <h1>Modliste & Installation</h1>
+        <p class="hero-sub">
+          Hier findest du alles, was du brauchst, um den Motofo20-Server mit der richtigen
+          Version & den richtigen Mods zu spielen.
+        </p>
+      </div>
     </section>
 
-    <section class="card warning">
-      <h2>⚠️ Wichtige Info</h2>
+    <section class="card warning glass">
+      <h2>⚠️ Kurzfassung</h2>
       <ul>
         <li>Spiele mit <b>Minecraft Java 1.21.x</b></li>
-        <li>Benutze <b>Fabric</b> als Mod-Loader (andere Loader können Probleme machen)</li>
-        <li><b>Simple Voice Chat ist Pflicht</b>, andere Mods sind optional (solange sie nur Client-Side sind)</li>
+        <li>Benutze <b>Fabric</b> als Mod-Loader</li>
+        <li><b>Simple Voice Chat ist Pflicht</b> – ohne diesen Mod kann es zu Problemen kommen</li>
       </ul>
     </section>
 
-    <section class="card">
-      <h2>🧩 Pflichtmods</h2>
+    <section class="card glass">
+      <h2>🧩 Pflichtmod</h2>
       <div class="modlist">
         <div class="modlist-item">
           <h3>Simple Voice Chat</h3>
           <p class="mod-desc">
-            Hauptmod für Ingame-Sprachchat. Ohne diesen Mod kannst du ggf. nicht an
-            bestimmten Events teilnehmen oder wirst automatisch getrennt.
+            Hauptmod für Ingame-Sprachchat. Du hörst Spieler in deiner Nähe,
+            kannst Gruppen & Events nutzen und musst nicht immer im Discord hängen.
           </p>
           <p class="mod-tags">
             <span class="tag required">Pflicht</span>
@@ -48,24 +55,24 @@
           <a class="button small"
              href="https://modrinth.com/mod/simple-voice-chat"
              target="_blank" rel="noopener noreferrer">
-            Mod auf Modrinth öffnen
+            🔗 Mod auf Modrinth öffnen
           </a>
         </div>
       </div>
     </section>
 
-    <section class="card">
+    <section class="card glass">
       <h2>✨ Empfohlene Client-Mods (optional)</h2>
       <p class="small-note">
-        Diese Mods sind <b>optional</b>, verbessern aber dein Spielerlebnis. Achte immer darauf,
-        dass sie nur Client-Side sind (keine unfairen Vorteile).
+        Diese Mods sind <b>optional</b>, verbessern aber dein Spielerlebnis.
+        Keine X-Ray / Cheats – nur Quality-of-Life & Performance.
       </p>
 
       <div class="modlist">
         <div class="modlist-item">
-          <h3>Performance-Mod (z. B. Sodium)</h3>
+          <h3>Sodium (oder vergleichbarer Performance-Mod)</h3>
           <p class="mod-desc">
-            Verbessert FPS und Performance, ideal für schwächere PCs.
+            Verbessert FPS und Performance massiv, besonders bei größeren Basen oder vielen Spielern.
           </p>
           <p class="mod-tags">
             <span class="tag optional">Optional</span>
@@ -74,6 +81,75 @@
         </div>
 
         <div class="modlist-item">
-          <h3>Minimap / HUD Mod (nur wenn erlaubt)</h3>
+          <h3>Minimap / HUD-Mod (nur wenn erlaubt)</h3>
           <p class="mod-desc">
-            Optionaler Mod für Übersicht. Bitte an die Server-Regeln halt
+            Praktisch für Orientierung. Bitte nur Minimap ohne Cave-/Ore-Radar, sonst unfair.
+          </p>
+          <p class="mod-tags">
+            <span class="tag optional">Optional</span>
+            <span class="tag info">Regeln beachten</span>
+          </p>
+        </div>
+
+        <div class="modlist-item">
+          <h3>Optische Mods (z. B. bessere Licht-/Sound-Mods)</h3>
+          <p class="mod-desc">
+            Alles, was nur dein Bild oder deinen Sound verändert, ist in der Regel okay.
+          </p>
+          <p class="mod-tags">
+            <span class="tag optional">Optional</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <h2>📦 Schritt-für-Schritt-Anleitung: Fabric + Mods</h2>
+      <div class="grid-2">
+        <ol class="steps">
+          <li>Downloade den <b>Fabric-Installer</b> für Minecraft 1.21.x von der offiziellen Seite.</li>
+          <li>Starte den Installer und wähle deine Minecraft-Version & dein Profil.</li>
+          <li>Starte den Launcher einmal mit dem neuen Fabric-Profil, damit der <code>mods</code>-Ordner erstellt wird.</li>
+          <li>Öffne deinen <code>.minecraft</code>-Ordner und gehe in den Ordner <code>mods</code>.</li>
+          <li>Lege die <b>Simple Voice Chat</b>-Mod (.jar) und deine optionalen Client-Mods dort ab.</li>
+        </ol>
+
+        <ol class="steps">
+          <li>Starte Minecraft erneut mit dem Fabric-Profil.</li>
+          <li>Gehe auf „Multiplayer“ → „Server hinzufügen“.</li>
+          <li>Trage als Adresse <code>mc.motofo20.de</code> ein.</li>
+          <li>Server speichern & joinen.</li>
+          <li>Im Voice-Chat-Menü (Standard-Taste siehe Mod-Beschreibung) dein Mikro einrichten.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="card glass">
+      <h2>🛠️ Troubleshooting</h2>
+      <div class="faq-item">
+        <h3>Das Spiel crasht beim Start</h3>
+        <p>
+          Prüfe, ob <b>alle Mods zur gleichen Version</b> passen (1.21.x) und ob du nicht
+          Forge-Only-Mods mit Fabric mischst.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Ich kann den Voice Chat nicht hören / niemand hört mich</h3>
+        <p>
+          Öffne das Simple-Voice-Chat-Menü (Standard-Key, siehe Mod-Einstellungen) und check:
+        </p>
+        <ul>
+          <li>Ist das richtige Mikrofon ausgewählt?</li>
+          <li>Ist Push-to-Talk (falls aktiviert) richtig gebunden?</li>
+          <li>Ist dein Ingame-Sound nicht komplett gemutet?</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>© Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.</p>
+    </footer>
+  </main>
+</body>
+</html>
