@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Motofo20 Minecraft Server</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-grid">
+
+  <header class="site-header glass">
+    <div class="logo">Motofo20<span>MC</span></div>
+    <nav class="nav">
+      <a href="index_en.html" class="active">Home</a>
+      <a href="index_en.html#join">Join</a>
+      <a href="mods.html">Mods</a>
+      <a href="rules.html">Rules (DE)</a>
+      <a href="changelog.html">Changelog (DE)</a>
+      <a href="index.html" style="margin-left:16px;">DE</a>
+      <a href="index_en.html" style="font-weight:700;">EN</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- LANDING / HERO -->
+    <section class="hero landing">
+      <div class="hero-text">
+        <p class="hero-pill">🌍 Fabric SMP • Simple Voice Chat • Community</p>
+        <h1>Motofo20 Minecraft Server</h1>
+        <p class="hero-sub">
+          A community SMP with events, light story and in-game voice chat
+          using <b>Simple Voice Chat</b>. Perfect for chill evenings, big builds
+          and shared adventures.
+        </p>
+
+        <div class="hero-actions">
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de">
+            ⛏️ Copy IP & Join
+          </button>
+          <a href="#join" class="button ghost">
+            🔗 Join instructions
+          </a>
+          <a href="mods.html" class="button ghost">
+            🧩 Modlist & downloads
+          </a>
+        </div>
+
+        <p class="hero-meta">
+          Java Edition <b>1.21.x</b> • Mod loader: <b>Fabric</b> • Language: 🇩🇪 / 🇬🇧 •
+          Simple Voice Chat required
+        </p>
+      </div>
+
+      <div class="hero-card glass hero-showcase">
+        <div class="hero-mc-frame">
+          <div class="hero-mc-top">
+            <span class="mc-dot red"></span>
+            <span class="mc-dot yellow"></span>
+            <span class="mc-dot green"></span>
+            <span class="mc-title">Motofo20 SMP – Multiplayer</span>
+          </div>
+          <div class="hero-mc-body">
+            <div class="mc-line mc-bright">🏰 Cities, bases & community projects</div>
+            <div class="mc-line mc-muted">❄️ Events, treasure hunts & light lore</div>
+            <div class="mc-line mc-bright">🎙️ Simple Voice Chat – required for everyone</div>
+          </div>
+        </div>
+        <p class="hero-card-note">
+          A relaxed but technically solid world for regular players & friends.
+        </p>
+      </div>
+    </section>
+
+    <!-- FEATURE-TEASER -->
+    <section class="grid-3">
+      <article class="card glass">
+        <h3>🤝 Community</h3>
+        <p>Play with friends and familiar faces in a chill, cooperative environment.</p>
+      </article>
+
+      <article class="card glass">
+        <h3>📜 Story & Events</h3>
+        <p>Seasonal events, treasure hunts and small lore moments to keep things interesting.</p>
+      </article>
+
+      <article class="card glass">
+        <h3>🎧 Simple Voice Chat</h3>
+        <p>In-game proximity voice chat – talk directly in Minecraft without relying on Discord.</p>
+      </article>
+    </section>
+
+    <!-- JOIN SECTION -->
+    <section id="join" class="card join-card glass">
+      <div class="join-left">
+        <h2>🔗 Server IP & Version</h2>
+
+        <div class="ip-row">
+          <div>
+            <p class="ip-label">Main IP</p>
+            <p class="ip big">mc.motofo20.de</p>
+          </div>
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de">
+            Copy IP
+          </button>
+        </div>
+
+        <div class="ip-row">
+          <div>
+            <p class="ip-label">Alternative IP</p>
+            <p class="ip-alt">mc.motofo20.com</p>
+          </div>
+          <button class="button ghost copy-btn" data-ip="mc.motofo20.com">
+            Copy IP
+          </button>
+        </div>
+
+        <ul class="join-meta">
+          <li>💿 <b>Version:</b> Minecraft Java 1.21.x</li>
+          <li>🧵 <b>Mod loader:</b> Fabric</li>
+          <li>🎙️ <b>Required mod:</b> Simple Voice Chat</li>
+        </ul>
+
+        <p class="small-note">
+          Copy IP → start Minecraft → Multiplayer → “Add Server” → paste IP → done.
+        </p>
+
+        <div id="copy-toast" class="toast" aria-live="polite">IP copied ✔</div>
+      </div>
+
+      <!-- QR & QUICK START -->
+      <div class="join-right">
+        <div class="qr-block">
+          <h3>📱 QR code for your phone</h3>
+          <p class="small-note">
+            Scan the code to quickly save the address or share it with friends.
+          </p>
+          <div class="qr-wrapper">
+            <img
+              src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=mc.motofo20.de"
+              alt="QR code for mc.motofo20.de"
+              class="qr-img"
+            />
+          </div>
+        </div>
+
+        <div class="quicksteps">
+          <h3>🚀 Quick start</h3>
+          <ol class="steps compact">
+            <li>Install the Fabric loader for 1.21.x</li>
+            <li>Put Simple Voice Chat into your <code>mods</code> folder</li>
+            <li>Start Minecraft with the Fabric profile</li>
+            <li>Add the IP & join</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOTD STYLE PREVIEW -->
+    <section class="card glass">
+      <h2>🎮 How it may look in your server list</h2>
+      <div class="motd-card">
+        <div class="motd-status-dot"></div>
+        <div class="motd-content">
+          <div class="motd-title">
+            <span class="motd-name">Motofo20 SMP</span>
+          </div>
+          <div class="motd-lines">
+            <div class="motd-line">
+              <span class="motd-green">Community</span>
+              <span class="motd-gray"> • </span>
+              <span class="motd-gold">Events</span>
+              <span class="motd-gray"> • </span>
+              <span class="motd-aqua">Simple Voice Chat</span>
+            </div>
+            <div class="motd-line">
+              <span class="motd-darkgray">Fabric 1.21.x</span>
+              <span class="motd-gray"> • </span>
+              <span class="motd-darkgray">Voice chat required</span>
+            </div>
+          </div>
+        </div>
+        <div class="motd-right">
+          <div class="motd-version">1.21.x</div>
+          <div class="motd-players">?? / ??</div>
+        </div>
+      </div>
+      <p class="small-note">
+        Actual player count and ping are, of course, coming from the live server.
+      </p>
+    </section>
+
+    <!-- RECOMMENDED MODS -->
+    <section class="card glass">
+      <h2>✨ Allowed & recommended client-side mods</h2>
+      <p>
+        In general, <b>any client-side mods are allowed</b> as long as they don’t give you
+        unfair advantages (no X-Ray, no wall-hack radar etc.).
+      </p>
+
+      <div class="grid-2">
+        <div>
+          <h3>✅ Recommended mods</h3>
+          <ul>
+            <li><b>Xaero’s Minimap</b> – clean minimap</li>
+            <li><b>Xaero’s World Map</b> – fullscreen world map</li>
+            <li><b>Sodium</b> – huge FPS boost</li>
+            <li><b>Distant Horizons</b> – far view distance with LOD terrain</li>
+          </ul>
+        </div>
+        <div>
+          <h3>🚫 Not allowed</h3>
+          <ul>
+            <li>X-Ray mods / X-Ray texture packs</li>
+            <li>Cheat clients & hacks</li>
+            <li>Radar that shows hidden players/mobs through walls</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="small-note">
+        More details & download links are on the <a href="mods.html">Modlist page</a>.
+      </p>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="card glass">
+      <h2>❓ FAQ</h2>
+
+      <div class="faq-item">
+        <h3>Do I really need mods?</h3>
+        <p>
+          Yes – <b>Simple Voice Chat</b> is required. All other client-side mods are optional
+          as long as they’re fair (QoL / performance only).
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which Minecraft version do I need?</h3>
+        <p>
+          Java Edition <b>1.21.x</b>. Make sure Fabric and your mods match this version.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>I can’t join / something is broken – what now?</h3>
+        <p>
+          First check:
+        </p>
+        <ul>
+          <li>Is the IP correct? <code>mc.motofo20.de</code></li>
+          <li>Are you using the Fabric profile?</li>
+          <li>Is Simple Voice Chat installed in your <code>mods</code> folder?</li>
+        </ul>
+        <p>
+          If it still doesn’t work, check your logs and ask the server team.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© Motofo20 Minecraft Server • Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.</p>
+    </footer>
+  </main>
+
+  <script>
+    // Copy IP to clipboard
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', async () => {
+        const ip = btn.getAttribute('data-ip');
+        try {
+          await navigator.clipboard.writeText(ip);
+          const toast = document.getElementById('copy-toast');
+          if (toast) {
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 1800);
+          }
+        } catch (err) {
+          alert('Could not copy IP automatically. Please copy it manually.');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
