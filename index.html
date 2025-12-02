@@ -1,54 +1,113 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Motofo20 Minecraft Server</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Kleines Extra-CSS nur für den Language Switch -->
+  <style>
+    .lang-switch {
+      display: flex;
+      gap: 6px;
+      margin-left: 16px;
+    }
+    .lang-switch button.active {
+      opacity: 1;
+      box-shadow: 0 0 0 1px rgba(34,197,94,0.6);
+    }
+  </style>
 </head>
 <body class="bg-grid">
 
   <header class="site-header glass">
     <div class="logo">Motofo20<span>MC</span></div>
     <nav class="nav">
-      <a href="index.html" class="active">Start</a>
-      <a href="#join">Beitreten</a>
-      <a href="mods.html">Modliste</a>
-      <a href="rules.html">Regeln</a>
-      <a href="changelog.html">Changelog</a>
-      <a href="index.html" style="margin-left:16px; font-weight:700;">DE</a>
-      <a href="index_en.html">EN</a>
+      <!-- Navigationstexte in beiden Sprachen -->
+      <a href="#top" class="active">
+        <span data-lang="en">Home</span>
+        <span data-lang="de">Start</span>
+      </a>
+      <a href="#join">
+        <span data-lang="en">Join</span>
+        <span data-lang="de">Beitreten</span>
+      </a>
+      <a href="#mods">
+        <span data-lang="en">Mods</span>
+        <span data-lang="de">Modliste</span>
+      </a>
+      <a href="#rules">
+        <span data-lang="en">Rules</span>
+        <span data-lang="de">Regeln</span>
+      </a>
+      <a href="#changelog">
+        <span data-lang="en">Changelog</span>
+        <span data-lang="de">Changelog</span>
+      </a>
+
+      <!-- Language Switch -->
+      <div class="lang-switch">
+        <button type="button" class="button small" data-set-lang="de">DE</button>
+        <button type="button" class="button small" data-set-lang="en">EN</button>
+      </div>
     </nav>
   </header>
 
-  <main class="container">
+  <main class="container" id="top">
 
-    <!-- LANDING / HERO -->
+    <!-- HERO / LANDING -->
     <section class="hero landing">
       <div class="hero-text">
-        <p class="hero-pill">🌍 Fabric SMP • Simple Voice Chat • Community</p>
-        <h1>Motofo20 Minecraft Server</h1>
-        <p class="hero-sub">
+        <p class="hero-pill" data-lang="en">
+          🌍 Fabric SMP • Simple Voice Chat • Community
+        </p>
+        <p class="hero-pill" data-lang="de">
+          🌍 Fabric SMP • Simple Voice Chat • Community
+        </p>
+
+        <h1 data-lang="en">Motofo20 Minecraft Server</h1>
+        <h1 data-lang="de">Motofo20 Minecraft Server</h1>
+
+        <p class="hero-sub" data-lang="en">
+          A community SMP with events, light story and in-game voice chat
+          using <b>Simple Voice Chat</b>. Perfect for chill evenings, big builds
+          and shared adventures.
+        </p>
+        <p class="hero-sub" data-lang="de">
           Ein Community-SMP mit Events, Story und echtem Ingame-Voicechat über
           <b>Simple Voice Chat</b>. Perfekt für chillige Abende, große Projekte
           und gemeinsame Abenteuer.
         </p>
 
         <div class="hero-actions">
-          <button class="button primary copy-btn" data-ip="mc.motofo20.de">
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de" data-lang="en">
+            ⛏️ Copy IP & join
+          </button>
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de" data-lang="de">
             ⛏️ IP kopieren & beitreten
           </button>
-          <a href="#join" class="button ghost">
+
+          <a href="#join" class="button ghost" data-lang="en">
+            🔗 How to join
+          </a>
+          <a href="#join" class="button ghost" data-lang="de">
             🔗 Join-Anleitung
           </a>
-          <a href="mods.html" class="button ghost">
+
+          <a href="#mods" class="button ghost" data-lang="en">
+            🧩 Modlist & downloads
+          </a>
+          <a href="#mods" class="button ghost" data-lang="de">
             🧩 Modliste & Downloads
           </a>
         </div>
 
-        <p class="hero-meta">
-          Java Edition <b>1.21.x</b> • Mod-Loader: <b>Fabric</b> • Sprache: 🇩🇪 / 🇬🇧 •
-          Simple Voice Chat Pflicht
+        <p class="hero-meta" data-lang="en">
+          Java Edition <b>1.21.x</b> • Mod loader: <b>Fabric</b> • Simple Voice Chat required
+        </p>
+        <p class="hero-meta" data-lang="de">
+          Java Edition <b>1.21.x</b> • Mod-Loader: <b>Fabric</b> • Simple Voice Chat Pflicht
         </p>
       </div>
 
@@ -61,92 +120,157 @@
             <span class="mc-title">Motofo20 SMP – Multiplayer</span>
           </div>
           <div class="hero-mc-body">
-            <div class="mc-line mc-bright">🏰 Städte, Basen & Community-Projekte</div>
-            <div class="mc-line mc-muted">❄️ Events, Schatzsuchen & Story-Elemente</div>
-            <div class="mc-line mc-bright">🎙️ Simple Voice Chat – Pflicht für alle</div>
+            <div class="mc-line mc-bright" data-lang="en">
+              🏰 Cities, bases & community projects
+            </div>
+            <div class="mc-line mc-bright" data-lang="de">
+              🏰 Städte, Basen & Community-Projekte
+            </div>
+            <div class="mc-line mc-muted" data-lang="en">
+              ❄️ Events, treasure hunts & light lore
+            </div>
+            <div class="mc-line mc-muted" data-lang="de">
+              ❄️ Events, Schatzsuchen & Story-Elemente
+            </div>
+            <div class="mc-line mc-bright" data-lang="en">
+              🎙️ Simple Voice Chat – required for everyone
+            </div>
+            <div class="mc-line mc-bright" data-lang="de">
+              🎙️ Simple Voice Chat – Pflicht für alle
+            </div>
           </div>
         </div>
-        <p class="hero-card-note">
+        <p class="hero-card-note" data-lang="en">
+          A relaxed but technically solid world for regular players & friends.
+        </p>
+        <p class="hero-card-note" data-lang="de">
           Eine entspannte, aber technisch gut aufgesetzte Welt für Stammspieler & Freunde.
         </p>
       </div>
     </section>
 
-    <!-- FEATURE-TEASER -->
+    <!-- FEATURE TEASER -->
     <section class="grid-3">
       <article class="card glass">
-        <h3>🤝 Community</h3>
-        <p>Spiele mit bekannten Gesichtern, Freunden & neuen Leuten in einer entspannten Umgebung.</p>
+        <h3 data-lang="en">🤝 Community</h3>
+        <h3 data-lang="de">🤝 Community</h3>
+        <p data-lang="en">
+          Play with friends and familiar faces in a chill, cooperative environment.
+        </p>
+        <p data-lang="de">
+          Spiele mit bekannten Gesichtern, Freunden & neuen Leuten in einer entspannten Umgebung.
+        </p>
       </article>
 
       <article class="card glass">
-        <h3>📜 Story & Events</h3>
-        <p>Winter-Events, Schatzsuchen, Lore-Elemente und kleine Roleplay-Momente für mehr Tiefe.</p>
+        <h3 data-lang="en">📜 Story & events</h3>
+        <h3 data-lang="de">📜 Story & Events</h3>
+        <p data-lang="en">
+          Seasonal events, treasure hunts and small lore moments to keep things interesting.
+        </p>
+        <p data-lang="de">
+          Winter-Events, Schatzsuchen, Lore-Elemente und kleine Roleplay-Momente für mehr Tiefe.
+        </p>
       </article>
 
       <article class="card glass">
-        <h3>🎧 Simple Voice Chat</h3>
-        <p>Ingame-Voice direkt in Minecraft. Nähe, Gruppen & Events – kein Zwang, im Discord zu hängen.</p>
+        <h3 data-lang="en">🎧 Simple Voice Chat</h3>
+        <h3 data-lang="de">🎧 Simple Voice Chat</h3>
+        <p data-lang="en">
+          In-game proximity voice chat – talk directly in Minecraft without relying on Discord.
+        </p>
+        <p data-lang="de">
+          Ingame-Voice direkt in Minecraft. Nähe, Gruppen & Events – kein Zwang, im Discord zu hängen.
+        </p>
       </article>
     </section>
 
     <!-- JOIN SECTION -->
     <section id="join" class="card join-card glass">
       <div class="join-left">
-        <h2>🔗 Server-IP & Version</h2>
+        <h2 data-lang="en">🔗 Server IP & version</h2>
+        <h2 data-lang="de">🔗 Server-IP & Version</h2>
 
         <div class="ip-row">
           <div>
-            <p class="ip-label">Haupt-IP</p>
+            <p class="ip-label" data-lang="en">Main IP</p>
+            <p class="ip-label" data-lang="de">Haupt-IP</p>
             <p class="ip big">mc.motofo20.de</p>
           </div>
-          <button class="button primary copy-btn" data-ip="mc.motofo20.de">
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de" data-lang="en">
+            Copy IP
+          </button>
+          <button class="button primary copy-btn" data-ip="mc.motofo20.de" data-lang="de">
             IP kopieren
           </button>
         </div>
 
         <div class="ip-row">
           <div>
-            <p class="ip-label">Alternative IP</p>
+            <p class="ip-label" data-lang="en">Alternative IP</p>
+            <p class="ip-label" data-lang="de">Alternative IP</p>
             <p class="ip-alt">mc.motofo20.com</p>
           </div>
-          <button class="button ghost copy-btn" data-ip="mc.motofo20.com">
+          <button class="button ghost copy-btn" data-ip="mc.motofo20.com" data-lang="en">
+            Copy IP
+          </button>
+          <button class="button ghost copy-btn" data-ip="mc.motofo20.com" data-lang="de">
             IP kopieren
           </button>
         </div>
 
         <ul class="join-meta">
-          <li>💿 <b>Version:</b> Minecraft Java 1.21.x</li>
-          <li>🧵 <b>Mod-Loader:</b> Fabric</li>
-          <li>🎙️ <b>Pflichtmod:</b> Simple Voice Chat</li>
+          <li data-lang="en">💿 <b>Version:</b> Minecraft Java 1.21.x</li>
+          <li data-lang="de">💿 <b>Version:</b> Minecraft Java 1.21.x</li>
+          <li data-lang="en">🧵 <b>Mod loader:</b> Fabric</li>
+          <li data-lang="de">🧵 <b>Mod-Loader:</b> Fabric</li>
+          <li data-lang="en">🎙️ <b>Required mod:</b> Simple Voice Chat</li>
+          <li data-lang="de">🎙️ <b>Pflichtmod:</b> Simple Voice Chat</li>
         </ul>
 
-        <p class="small-note">
+        <p class="small-note" data-lang="en">
+          Copy IP → start Minecraft → Multiplayer → “Add Server” → paste IP → done.
+        </p>
+        <p class="small-note" data-lang="de">
           IP kopieren → Minecraft starten → Multiplayer → „Server hinzufügen“ → IP einfügen → fertig.
         </p>
 
-        <div id="copy-toast" class="toast" aria-live="polite">IP kopiert ✔</div>
+        <div id="copy-toast" class="toast" aria-live="polite">
+          <span data-lang="en">IP copied ✔</span>
+          <span data-lang="de">IP kopiert ✔</span>
+        </div>
       </div>
 
       <!-- QR & QUICK START -->
       <div class="join-right">
         <div class="qr-block">
-          <h3>📱 QR-Code für Handy</h3>
-          <p class="small-note">
+          <h3 data-lang="en">📱 QR code for your phone</h3>
+          <h3 data-lang="de">📱 QR-Code für Handy</h3>
+          <p class="small-note" data-lang="en">
+            Scan the code to quickly save the address or share it with friends.
+          </p>
+          <p class="small-note" data-lang="de">
             Scanne den Code, um die Adresse schnell zu speichern oder an Freunde zu schicken.
           </p>
           <div class="qr-wrapper">
             <img
               src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=mc.motofo20.de"
-              alt="QR-Code für mc.motofo20.de"
+              alt="QR code for mc.motofo20.de"
               class="qr-img"
             />
           </div>
         </div>
 
         <div class="quicksteps">
-          <h3>🚀 Schnellstart</h3>
-          <ol class="steps compact">
+          <h3 data-lang="en">🚀 Quick start</h3>
+          <h3 data-lang="de">🚀 Schnellstart</h3>
+          <ol class="steps compact" data-lang="en">
+            <li>Install the Fabric loader for 1.21.x</li>
+            <li>Put Simple Voice Chat into your <code>mods</code> folder</li>
+            <li>Start Minecraft with the Fabric profile</li>
+            <li>Add the IP & join</li>
+          </ol>
+          <ol class="steps compact" data-lang="de">
             <li>Fabric-Loader für 1.21.x installieren</li>
             <li>Simple Voice Chat in den <code>mods</code>-Ordner legen</li>
             <li>Minecraft mit dem Fabric-Profil starten</li>
@@ -156,9 +280,11 @@
       </div>
     </section>
 
-    <!-- MOTD STYLE PREVIEW -->
+    <!-- MOTD PREVIEW -->
     <section class="card glass">
-      <h2>🎮 So könnte der Server in deiner Liste aussehen</h2>
+      <h2 data-lang="en">🎮 How it may look in your server list</h2>
+      <h2 data-lang="de">🎮 So könnte der Server in deiner Liste aussehen</h2>
+
       <div class="motd-card">
         <div class="motd-status-dot"></div>
         <div class="motd-content">
@@ -173,7 +299,12 @@
               <span class="motd-gray"> • </span>
               <span class="motd-aqua">Simple Voice Chat</span>
             </div>
-            <div class="motd-line">
+            <div class="motd-line" data-lang="en">
+              <span class="motd-darkgray">Fabric 1.21.x</span>
+              <span class="motd-gray"> • </span>
+              <span class="motd-darkgray">Voice chat required</span>
+            </div>
+            <div class="motd-line" data-lang="de">
               <span class="motd-darkgray">Fabric 1.21.x</span>
               <span class="motd-gray"> • </span>
               <span class="motd-darkgray">Modpflicht: Simple Voice Chat</span>
@@ -185,85 +316,136 @@
           <div class="motd-players">?? / ??</div>
         </div>
       </div>
-      <p class="small-note">
+      <p class="small-note" data-lang="en">
+        Actual player count and ping are, of course, coming from the live server.
+      </p>
+      <p class="small-note" data-lang="de">
         Die echte Anzeige (Spielerzahl, Ping etc.) kommt natürlich von deinem laufenden Server.
       </p>
     </section>
 
-    <!-- EMPFOHLENE MODS -->
-    <section class="card glass">
-      <h2>✨ Client-Side-Mods – was ist erlaubt?</h2>
-      <p>
+    <!-- RECOMMENDED MODS -->
+    <section id="mods" class="card glass">
+      <h2 data-lang="en">✨ Allowed & recommended client-side mods</h2>
+      <h2 data-lang="de">✨ Client-Side-Mods – was ist erlaubt?</h2>
+
+      <p data-lang="en">
+        In general, <b>any client-side mods are allowed</b> as long as they don’t give you
+        unfair advantages (no X-Ray, no wall-hack radar etc.).
+      </p>
+      <p data-lang="de">
         Grundsätzlich dürfen Spieler <b>alle Client-Side-Mods</b> benutzen,
         solange sie keine unfairen Vorteile bringen (kein X-Ray, kein Radar durch Wände etc.).
       </p>
 
       <div class="grid-2">
         <div>
-          <h3>✅ Empfohlene Mods</h3>
-          <ul>
+          <h3 data-lang="en">✅ Recommended mods</h3>
+          <h3 data-lang="de">✅ Empfohlene Mods</h3>
+          <ul data-lang="en">
+            <li><b>Xaero’s Minimap</b> – clean minimap</li>
+            <li><b>Xaero’s World Map</b> – fullscreen world map</li>
+            <li><b>Sodium</b> – huge FPS boost</li>
+            <li><b>Distant Horizons</b> – far view distance with LOD terrain</li>
+          </ul>
+          <ul data-lang="de">
             <li><b>Xaero’s Minimap</b> – Übersichtliche Minimap</li>
-            <li><b>Xaero’s World Map</b> – Große Weltkarte zum Erkunden</li>
+            <li><b>Xaero’s World Map</b> – Große Weltkarte</li>
             <li><b>Sodium</b> – Deutlich bessere Performance / FPS</li>
             <li><b>Distant Horizons</b> – Weite Sichtweite mit LoD-World</li>
           </ul>
         </div>
         <div>
-          <h3>🚫 Nicht erlaubt</h3>
-          <ul>
+          <h3 data-lang="en">🚫 Not allowed</h3>
+          <h3 data-lang="de">🚫 Nicht erlaubt</h3>
+          <ul data-lang="en">
+            <li>X-Ray mods / X-Ray texture packs</li>
+            <li>Cheat clients & hacks</li>
+            <li>Radar that shows hidden players/mobs through walls</li>
+          </ul>
+          <ul data-lang="de">
             <li>X-Ray-Mods / Texturepacks mit X-Ray</li>
             <li>Cheat-Clients & Hacks</li>
-            <li>Radar, das versteckte Spieler / Mobs durch Wände zeigt</li>
+            <li>Radar, das versteckte Spieler/Mobs durch Wände zeigt</li>
           </ul>
         </div>
       </div>
+    </section>
 
-      <p class="small-note">
-        Mehr Details & Download-Links findest du auf der <a href="mods.html">Modlist-Seite</a>.
+    <!-- RULES + CHANGELOG LINKS (nur als Anker; echte Seiten kannst du separat machen) -->
+    <section id="rules" class="card glass">
+      <h2 data-lang="en">📜 Rules</h2>
+      <h2 data-lang="de">📜 Regeln</h2>
+      <p data-lang="en">
+        Detailed rules are listed on the dedicated rules page.
+      </p>
+      <p data-lang="de">
+        Die ausführlichen Regeln findest du auf der separaten Regel-Seite.
+      </p>
+      <!-- z.B. könnte hier später ein Link auf rules.html kommen -->
+    </section>
+
+    <section id="changelog" class="card glass">
+      <h2 data-lang="en">🗓️ Changelog</h2>
+      <h2 data-lang="de">🗓️ Changelog</h2>
+      <p data-lang="en">
+        All server changes are documented on the changelog page.
+      </p>
+      <p data-lang="de">
+        Alle wichtigen Änderungen am Server werden auf der Changelog-Seite dokumentiert.
       </p>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="card glass">
-      <h2>❓ Häufige Fragen</h2>
-
-      <div class="faq-item">
-        <h3>Benötige ich zwingend Mods?</h3>
-        <p>
-          Ja – <b>Simple Voice Chat</b> ist Pflicht. Alle anderen Client-Mods sind erlaubt, solange sie
-          nur Komfort / Performance verbessern und nicht cheaten.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Welche Minecraft-Version muss ich benutzen?</h3>
-        <p>
-          Java Edition <b>1.21.x</b>. Achte darauf, dass Fabric & deine Mods auch zu 1.21.x passen.
-        </p>
-      </div>
-
-      <div class="faq-item">
-        <h3>Ich hab Probleme beim Joinen – was tun?</h3>
-        <p>
-          Check zuerst:
-        </p>
-        <ul>
-          <li>Stimmt die IP? <code>mc.motofo20.de</code></li>
-          <li>Nutzt du das Fabric-Profil?</li>
-          <li>Ist Simple Voice Chat in deinem <code>mods</code>-Ordner?</li>
-        </ul>
-        <p>
-          Wenn es dann immer noch nicht klappt: Logs checken & beim Server-Team melden.
-        </p>
-      </div>
-    </section>
-
     <footer>
-      <p>© Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.</p>
+      <p data-lang="en">
+        © Motofo20 Minecraft Server • Not an official Minecraft service. Not approved by or associated with Mojang or Microsoft.
+      </p>
+      <p data-lang="de">
+        © Motofo20 Minecraft Server • Nicht offizieller Server von Mojang oder Microsoft.
+      </p>
     </footer>
   </main>
 
   <script>
+    // Language handling
+    const LANG_KEY = 'moto_lang';
+
+    function applyLanguage(lang) {
+      document.documentElement.setAttribute('data-lang', lang);
+      const allLangNodes = document.querySelectorAll('[data-lang]');
+      allLangNodes.forEach(el => {
+        if (el.dataset.lang === lang) {
+          el.style.display = '';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+
+      // Buttons aktiv markieren
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.setLang === lang);
+      });
+
+      localStorage.setItem(LANG_KEY, lang);
+    }
+
+    // Init lang from localStorage oder Browser
+    (function initLang() {
+      let lang = localStorage.getItem(LANG_KEY);
+      if (!lang) {
+        const browserLang = navigator.language || navigator.userLanguage || 'en';
+        lang = browserLang.startsWith('de') ? 'de' : 'en';
+      }
+      applyLanguage(lang);
+    })();
+
+    // Switch-Buttons
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        applyLanguage(btn.dataset.setLang);
+      });
+    });
+
     // Copy IP to clipboard
     document.querySelectorAll('.copy-btn').forEach(btn => {
       btn.addEventListener('click', async () => {
@@ -276,7 +458,7 @@
             setTimeout(() => toast.classList.remove('show'), 1800);
           }
         } catch (err) {
-          alert('Konnte die IP leider nicht kopieren. Bitte manuell markieren.');
+          alert('Konnot copy IP automatically. Please copy it manually.');
         }
       });
     });
